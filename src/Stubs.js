@@ -1,7 +1,13 @@
+class CentralServerApi {
+    constructor(host) {
+        this.api_constant = `${host}/api/v1`;
+        this.token = null;
+    }
+
 none="";
 empty="";
 
-function UsersRegister(username, password, email) {
+function usersRegister(username, password, email) {
     return {
         "username": "Andrey",
         "avatar": null,
@@ -13,38 +19,38 @@ function UsersRegister(username, password, email) {
     };
 }
 
-function UsersAuth(username, password) {
+function usersAuth(username, password) {
     return {
         "user": "User",
         "token": "abcd1234",
     };
 }
 
-function UsersResetRequest(email) {
+function usersResetRequest(email) {
     return none;
 }
 
-function UsersReset(password, token){
+function usersReset(password, token){
     return none;
 }
 
-function UsersAvatar(image) {
+function usersAvatar(image) {
     return empty;
 }
 
-function UsersAbout(about) {
+function usersAbout(about) {
     return empty;
 }
 
-function UsersSubscribe(community) {
+function usersSubscribe(community) {
     return empty;
 }
 
-function UsersUnsubscribe(community) {
+function usersUnsubscribe(community) {
     return empty;
 }
 
-function UsersUserPosts(M, N){
+function usersUserPosts(M, N){
     return [{
         "owner": "Otradskaya",
         "community": "College_Server",
@@ -56,7 +62,7 @@ function UsersUserPosts(M, N){
     }];
 }
 
-function CommunityName(name){
+function communityName(name){
     return {
         "name": "College_Server",
         "owner": "Otradskaya",
@@ -68,11 +74,11 @@ function CommunityName(name){
     };
 }
 
-function CommunityNamePostsText(community, title, text, media, mediaN) {
+function communityNamePostsText(community, title, text, media, mediaN) {
     return empty;
 }
 
-function CommunityCommunityPosts(M, N) {
+function communityCommunityPosts(M, N) {
     return [{
         "owner": "Otradskaya",
         "community": "College_Server",
@@ -84,15 +90,15 @@ function CommunityCommunityPosts(M, N) {
     }];
 }
 
-function CommunityCommunityPostsPost_idLike(post_id, community) {
+function communityCommunityPostsPostIdLike(post_id, community) {
     return empty;
 }
 
-function CommunityCommunityPostsPost_idDislike(post_id, community) {
+function communityCommunityPostsPostIdDislike(post_id, community) {
     return empty;
 }
 
-
+}
 
 
 
