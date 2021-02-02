@@ -7,9 +7,9 @@ class CentralServerApi {
 none="";
 empty="";
 
-function usersRegister(username, password, email) {
+    async usersRegister(username, password, email) {
     return {
-        "username": "Andrey",
+        "username": username,
         "avatar": null,
         "karma": -10,
         "lang": "ru",
@@ -17,40 +17,39 @@ function usersRegister(username, password, email) {
         "followers": 3,
         "registration": "10/02/21",
     };
-}
+    }
 
-function usersAuth(username, password) {
+    async usersAuth(username, password) {
     return {
-        "user": "User",
-        "token": "abcd1234",
+        "user": username,
+        "token": password,
     };
-}
+    }
 
-function usersResetRequest(email) {
+    async usersResetRequest(email) {
     return none;
-}
+    }
 
-function usersReset(password, token){
+    async usersReset(password, token){
     return none;
-}
+    }
 
-function usersAvatar(image) {
+    async usersAvatar(image) {
     return empty;
-}
-
-function usersAbout(about) {
+    }
+    async usersAbout(about) {
     return empty;
-}
+    }
 
-function usersSubscribe(community) {
+    async usersSubscribe(community) {
     return empty;
-}
+    }
 
-function usersUnsubscribe(community) {
+    async usersUnsubscribe(community) {
     return empty;
-}
+    }
 
-function usersUserPosts(M, N){
+    async usersUserPosts(M, N){
     return [{
         "owner": "Otradskaya",
         "community": "College_Server",
@@ -60,9 +59,9 @@ function usersUserPosts(M, N){
         "date": "10/02/21 12:05:31",
         "liked": true,
     }];
-}
+    }
 
-function communityName(name){
+    async communityName(name){
     return {
         "name": "College_Server",
         "owner": "Otradskaya",
@@ -72,13 +71,13 @@ function communityName(name){
         "registration": "10/02/21",
         "followers": 59,
     };
-}
+    }
 
-function communityNamePostsText(community, title, text, media, mediaN) {
+    async communityNamePostsText(community, title, text, media, mediaN) {
     return empty;
-}
+    }
 
-function communityCommunityPosts(M, N) {
+    async communityCommunityPosts(M, N) {
     return [{
         "owner": "Otradskaya",
         "community": "College_Server",
@@ -88,15 +87,15 @@ function communityCommunityPosts(M, N) {
         "date": "10/02/21 12:05:31",
         "liked": true,
     }];
-}
+    }
 
-function communityCommunityPostsPostIdLike(post_id, community) {
+    async communityCommunityPostsPostIdLike(post_id, community) {
     return empty;
-}
+    }
 
-function communityCommunityPostsPostIdDislike(post_id, community) {
+    async communityCommunityPostsPostIdDislike(post_id, community) {
     return empty;
-}
+    }
 
 }
 
