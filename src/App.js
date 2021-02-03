@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Home from "./pages/home"
+import ViewPost from "./pages/view_post"
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -24,6 +25,9 @@ function App() {
           <li>
             <Link to="/users">Users</Link>
           </li>
+            <li>
+                <Link to="/view_post">View post</Link>
+            </li>
         </ul>
       </nav>
 
@@ -39,6 +43,9 @@ function App() {
         <Route path="/">
           <Home />
         </Route>
+          <Route path="/view_post">
+              <ViewPost/>
+          </Route>
       </Switch>
     </div>
   </Router>
