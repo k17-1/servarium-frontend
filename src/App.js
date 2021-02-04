@@ -8,10 +8,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import Header from "./components/header";
+import Registration from "./pages/registration";
+import Authorization from "./pages/authorization";
 
 function App() {
   return (
+      <div>
     <Router>
     <div>
       <nav>
@@ -28,11 +31,17 @@ function App() {
             <li>
                 <Link to="/view_post">View post</Link>
             </li>
+          <li>
+            <Link to="/registration">Registration</Link>
+          </li>
+          <li>
+            <Link to="/authorization">Authorization</Link>
+          </li>
         </ul>
       </nav>
 
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
+       {/*A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL.*/}
       <Switch>
         <Route path="/about">
           <div>About</div>
@@ -40,15 +49,22 @@ function App() {
         <Route path="/users">
           <div>Users</div>
         </Route>
-        <Route path="/">
-          <Home />
-        </Route>
           <Route path="/view_post">
               <ViewPost/>
           </Route>
+        <Route path="/registration">
+          <Registration/>
+        </Route>
+        <Route path="/authorization">
+          <Authorization/>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </div>
   </Router>
+      </div>
   );
 }
 

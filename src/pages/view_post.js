@@ -1,6 +1,12 @@
+const Body = {
+
+    backgroundColor: "#fff4be",
+}    
 function ViewPost() {
     return (
-        <div>View Post</div>
+        <div style={Body}>
+         ffd
+        </div>
     );
 }
 
