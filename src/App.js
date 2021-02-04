@@ -11,6 +11,7 @@ import {
 import Header from "./components/header";
 import Registration from "./pages/registration";
 import Authorization from "./pages/authorization";
+import RestorePassword from "./pages/restore_password";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           <li>
             <Link to="/authorization">Authorization</Link>
           </li>
+          <li>
+            <Link to="/restore_password">restore_password</Link>
+          </li>
         </ul>
       </nav>
 
@@ -57,6 +61,9 @@ function App() {
         </Route>
         <Route path="/authorization">
           <Authorization/>
+        </Route>
+        <Route path="/restore_password">
+          <RestorePassword/>
         </Route>
         <Route path="/">
           <Home />

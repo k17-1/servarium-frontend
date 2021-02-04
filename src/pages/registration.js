@@ -2,10 +2,7 @@ import TextField from '@material-ui/core/TextField';
 import {makeStyles, styled} from '@material-ui/core/styles';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
-const Body = {
 
-
-}
 const Container ={
     border:"1px solid grey",
     borderRadius: "35px",
@@ -13,9 +10,6 @@ const Container ={
     marginRight:"20%",
     backgroundColor: "white",
     textAlign: "center",
-}
-const TextBox={
-    height: "40px"
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -49,14 +43,13 @@ const MyButton = styled(Button)({
 function Registration() {
     const classes = useStyles();
     return (
-        <div style={Body}>
+        <div>
             <div style={Container}>
                 <form className={classes.root} noValidate autoComplete="off">
                     <div>
                 <TextField style={{marginTop: "20px"}}
                     id="outlined-required"
                     label="Имя пользователя"
-                    defaultValue=""
                     variant="outlined"
                 />
                     </div>

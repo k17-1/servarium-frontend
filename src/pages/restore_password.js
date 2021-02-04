@@ -39,7 +39,7 @@ const MyButton = styled(Button)({
 });
 
 
-function Authorization () {
+function RestorePassword() {
     const classes = useStyles();
     return (
         <div>
@@ -48,26 +48,23 @@ function Authorization () {
                     <div>
                         <TextField style={{marginTop: "20px"}}
                                    id="outlined-required"
-                                   label="Имя пользователя или Email"
+                                   label="Email"
                                    variant="outlined"
                         />
                     </div>
 
                     <div>
                         <TextField
-                                   id="outlined-password-input"
-                                   label="Пароль"
-                                   type="password"
-                                   autoComplete="current-password"
-                                   variant="outlined"
+                            id="outlined-password-input"
+                            label="Код"
+                            autoComplete="current-password"
+                            variant="outlined"
                         />
                     </div>
 
-                    <RegistrationButton variant="contained">Авторизоваться</RegistrationButton>
+                    <RegistrationButton variant="contained">Получить код</RegistrationButton>
 
-                    <MyButton variant="contained">Забыли пароль?</MyButton>
-
-                    <div><RegistrationButton variant="contained">Зарегистрироваться</RegistrationButton></div>
+                    <MyButton variant="contained">Восстановить пароль</MyButton>
 
                 </form>
             </div>
@@ -75,4 +72,4 @@ function Authorization () {
     );
 }
 
-export default Authorization;
+export default RestorePassword;
