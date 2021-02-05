@@ -31,14 +31,6 @@ const RegistrationButton = styled(Button)({
     margin: "10px",
 });
 
-const MyButton = styled(Button)({
-    borderRadius: "35px",
-    backgroundColor: "white",
-    textTransform:"none",
-    margin: "10px",
-});
-
-
 function RestorePassword() {
     const classes = useStyles();
     return (
@@ -48,7 +40,7 @@ function RestorePassword() {
                     <div>
                         <TextField style={{marginTop: "20px"}}
                                    id="outlined-required"
-                                   label="Email"
+                                   label="Новый пароль"
                                    variant="outlined"
                         />
                     </div>
@@ -56,15 +48,13 @@ function RestorePassword() {
                     <div>
                         <TextField
                             id="outlined-password-input"
-                            label="Код"
+                            label="Повторите пароль"
                             autoComplete="current-password"
                             variant="outlined"
                         />
                     </div>
 
-                    <RegistrationButton variant="contained">Получить код</RegistrationButton>
-
-                    <MyButton variant="contained">Восстановить пароль</MyButton>
+                    <RegistrationButton variant="contained">Изменить пароль</RegistrationButton>
 
                 </form>
             </div>
