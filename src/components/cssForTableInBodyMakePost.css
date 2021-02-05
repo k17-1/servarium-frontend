@@ -1,0 +1,30 @@
+.tab{
+   font-size: 26px;
+    min-width: 500px;
+    margin: 10px;
+}
+
+
+td1{
+    min-width: 400px;
+}
+
+.left{
+    text-align: left;
+
+    max-width: 100px;
+}
+
+.right{
+    text-align: right;
+    padding: 10px;
+}
+
+.h3{
+    margin: auto;
+    position: center;
+}
+
+.publish{
+    padding: 15px;
+}
