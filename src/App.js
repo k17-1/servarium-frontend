@@ -12,6 +12,7 @@ import Header from "./components/header";
 import Registration from "./pages/registration";
 import Authorization from "./pages/authorization";
 import RestorePassword from "./pages/restore_password";
+import ProfilePage from "./pages/profile_page";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
           <li>
             <Link to="/restore_password">restore_password</Link>
           </li>
+          <li>
+            <Link to="/profile_page">profile_page</Link>
+          </li>
         </ul>
       </nav>
 
@@ -64,6 +68,9 @@ function App() {
         </Route>
         <Route path="/restore_password">
           <RestorePassword/>
+        </Route>
+        <Route path="/profile_page">
+          <ProfilePage/>
         </Route>
         <Route path="/">
           <Home />
